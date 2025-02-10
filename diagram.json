@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "author": "Victor Weverthon",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": -12.85,
+        "left": -150.05,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      { "type": "wokwi-servo", "id": "servo1", "top": 7.6, "left": 48, "attrs": {} }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GND.8", "servo1:GND", "black", [ "h77.11", "v38.4" ] ],
+      [ "pico:3V3", "servo1:V+", "red", [ "h67.51", "v28.8", "h67.2" ] ],
+      [ "pico:GP22", "servo1:PWM", "blue", [ "h67.51", "v-19.2" ] ]
+    ],
+    "dependencies": {}
+  }
