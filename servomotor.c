@@ -1,10 +1,12 @@
+//Definição das bibliotecas
 #include <pico/stdio.h>
 #include "pico/stdlib.h"
-#include "hardware/pwm.h"
-#include "hardware/clocks.h"
+#include "hardware/pwm.h" //Configura o hardware para controle do pwm
+#include "hardware/clocks.h" //Possui funções para configurar e manipular os clocks da pico w
 
-#define SERVO_PIN 22
-#define LED_PIN 12
+//Definição dos pinos e funções do código
+#define SERVO_PIN 22  //Define o pino do servomotor
+#define LED_PIN 12    //Define pino de led para eventuais incrementos
 #define PWM_FREQ 50 // 50Hz -> período de 20ms
 #define MIN_PULSE 500   // 0° posição (500µs)
 #define MID_PULSE 1470  // 90° posição (1470µs)
