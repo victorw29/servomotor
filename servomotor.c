@@ -8,9 +8,9 @@
 #define SERVO_PIN 22  //Define o pino do servomotor
 #define LED_PIN 12    //Define pino de led para eventuais incrementos
 #define PWM_FREQ 50 // 50Hz -> período de 20ms
-#define MIN_PULSE 500   // 0° posição (500µs)
-#define MID_PULSE 1470  // 90° posição (1470µs)
-#define MAX_PULSE 2400  // 180° posição (2400µs)
+#define MIN_PULSE 500   // 0° posição (500µs) (0,025%)
+#define MID_PULSE 1470  // 90° posição (1470µs) (0,0735%)
+#define MAX_PULSE 2400  // 180° posição (2400µs) (0,12%)
 #define STEP_PULSE 5    // Incremento suave para movimento
 #define STEP_DELAY 10   // Atraso entre movimentos suaves (10ms)
 
@@ -36,15 +36,15 @@ int main() {
     while (1) {
         // Posição 180°
         set_servo_position(slice_num, channel, MAX_PULSE);
-        sleep_ms(5000);
+        sleep_ms(5000); //Pausa de 5 segundos
 
         // Posição 90°
         set_servo_position(slice_num, channel, MID_PULSE);
-        sleep_ms(5000);
+        sleep_ms(5000); //Pausa de 5 segundos
 
         // Posição 0°
         set_servo_position(slice_num, channel, MIN_PULSE);
-        sleep_ms(5000);
+        sleep_ms(5000); //Pausa de 5 segundos
 
         // Movimentação suave entre 0° e 180°
         for (uint32_t pos = MIN_PULSE; pos <= MAX_PULSE; pos += STEP_PULSE) {
