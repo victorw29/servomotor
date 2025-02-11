@@ -46,4 +46,4 @@ git clone https://github.com/victorw29/servomotor
 - Se estiver usando o simulador Wokwi, pode ser necessário ajustar os tempos de espera devido ao comportamento do ambiente simulado.
 
   ## Links:
-  
+  - https://youtu.be/uvTaZiHFd3w
